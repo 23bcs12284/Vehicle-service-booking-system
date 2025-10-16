@@ -1,13 +1,8 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Dashboard from "./components/Dashboard";
-import ForgetPassword from "./components/ForgetPassword";
-import ResetPassword from "./components/ResetPassword";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
@@ -16,8 +11,6 @@ function App() {
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
-
-export default App;
